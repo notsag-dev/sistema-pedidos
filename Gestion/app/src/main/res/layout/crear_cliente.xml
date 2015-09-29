@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="15dp"
+    android:layout_marginTop="15dp"
+    android:label="Nuevo cliente">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nombre: "/>
+    <EditText
+        android:layout_width="wrap_content"
+        android:maxWidth="400dp"
+        android:minWidth="400dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:id="@+id/nombreClienteIngreso"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="RUT: "/>
+    <EditText
+        android:layout_width="wrap_content"
+        android:maxWidth="400dp"
+        android:minWidth="400dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:id="@+id/rutClienteIngreso"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Teléfono 1:"/>
+    <EditText
+        android:layout_width="wrap_content"
+        android:maxWidth="400dp"
+        android:minWidth="400dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:id="@+id/tel1ClienteIngreso"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Teléfono 2: "/>
+    <EditText
+        android:layout_width="wrap_content"
+        android:maxWidth="400dp"
+        android:minWidth="400dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:id="@+id/tel2ClienteIngreso"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="guardarCliente"
+        android:text="Guardar"/>
+</LinearLayout>

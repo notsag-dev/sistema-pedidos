@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="15dp"
+    android:layout_marginTop="15dp"
+    android:label="Nuevo producto">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nombre: "/>
+    <EditText
+        android:layout_width="wrap_content"
+        android:maxWidth="400dp"
+        android:minWidth="400dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:id="@+id/nombreProductoIngreso"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Precio: "/>
+    <EditText
+        android:layout_width="wrap_content"
+        android:maxWidth="150dp"
+        android:minWidth="150dp"
+        android:inputType="numberDecimal"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:id="@+id/precioProductoIngreso"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cantidad:"/>
+    <EditText
+        android:layout_width="wrap_content"
+        android:maxWidth="150dp"
+        android:minWidth="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:inputType="number"
+        android:id="@+id/cantidadProductosIngreso"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="guardarProducto"
+        android:text="Guardar"/>
+</LinearLayout>

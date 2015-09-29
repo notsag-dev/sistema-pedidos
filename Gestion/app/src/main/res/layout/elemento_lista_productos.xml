@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:layout_marginTop="5dp">
+        <TextView android:id="@+id/nombreProductoProductos"
+            android:layout_width="wrap_content"
+            android:text="texto test"
+            android:textSize="20dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:textColor="@color/black"
+            android:layout_alignParentLeft="true"
+            android:layout_toLeftOf="@+id/precioPackProductos"/>
+
+        <TextView android:id="@+id/precioPackProductos"
+            android:layout_width="wrap_content"
+            android:text="texto test"
+            android:textSize="20dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_alignParentRight="true"
+            android:paddingLeft="15dp"
+            android:gravity="center"
+            android:textColor="@color/brown"/>
+    </RelativeLayout>Layout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp">
+        <!--TextView android:id="@+id/cantidadPackProductos"
+            android:layout_width="wrap_content"
+            android:text="texto test"
+            android:textSize="15dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:gravity="center"
+            android:textColor="@color/black"/-->
+            <TextView android:id="@+id/precioUnitarioProductos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="texto test"
+                android:textSize="17dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="10dp"
+                android:gravity="center"
+                android:layout_alignParentLeft="true"
+                android:textColor="@color/green"
+                android:layout_toLeftOf="@+id/precioPublicoProductos"/>
+            <TextView android:id="@+id/precioPublicoProductos"
+                android:layout_width="wrap_content"
+                android:text="texto test"
+                android:textSize="17dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginRight="10dp"
+                android:gravity="center"
+                android:textColor="@color/green"/>
+    </LinearLayout>
+</LinearLayout>

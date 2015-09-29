@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.gastongimenez.www.gestion" >
+    <uses-sdk android:minSdkVersion="11" />
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".MenuPrincipal"
+            android:label="@string/menu_principal" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MenuPedidos"
+            android:label="@string/title_activity_menu_pedidos" >
+        </activity>
+        <activity
+            android:name=".MenuProductos"
+            android:label="@string/title_activity_menu_productos" >
+        </activity>
+        <activity
+            android:name=".MenuClientes"
+            android:label="@string/title_activity_menu_clientes" >
+        </activity>
+        <activity
+            android:name=".CrearPedido"
+            android:label="@string/title_activity_pedido_nuevo" >
+        </activity>
+        <activity
+            android:name=".ListarPedidos"
+            android:label="@string/title_activity_listar_pedidos" >
+        </activity>
+        <activity
+            android:name=".CrearCliente"
+            android:label="@string/title_crear_cliente" >
+        </activity>
+        <activity
+            android:name=".CrearProducto"
+            android:label="@string/title_crear_producto" >
+        </activity>
+    </application>
+
+</manifest>
