@@ -1,0 +1,5 @@
+Cantidad aproximada de unidades para abajo.
+Filtro por categoría (combo box)
+Cambio a mano del precio de línea en el pedido
+Posibilidad de vender unidades sueltas cuando el producto está ingresado por el pack
+Pensar forma de pasar archivo de tablet a tablet (drive, dropbox).

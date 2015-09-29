@@ -1,0 +1,9 @@
+- Ver que en campos numéricos no haya otros caracteres
+
+- En algunos casos el precio del pack está por kilo. Cómo funciona esto?
+
+- Hay algún pack tal que se vendan individualmente los productos? En ese caso dar la posibilidad de que cuando se vaya a agregar a un pedido elegir unidades del pack o el pack entero.
+  Veo un caso, el dulce de leche, presentado en 
+
+- Si el producto no viene en pack, la cantidad de unidades en la tabla debe ser 1.
+
