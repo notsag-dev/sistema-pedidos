@@ -2,32 +2,32 @@
 <items version="2" >
 
     <item
-        jar="C:\Users\Tonga\Documents\Proyectos\Repositorio\Gestion\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\classes.jar"
+        jar="C:\Users\Tonga\Documents\Proyectos\Repositorio\GestionMaximilian\Gestion\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\classes.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
-        <dex dex="C:\Users\Tonga\Documents\Proyectos\Repositorio\Gestion\app\build\intermediates\pre-dexed\debug\classes-cffa42727b1faec5b596c2e887a75480b31f1249.jar" />
+        <dex dex="C:\Users\Tonga\Documents\Proyectos\Repositorio\GestionMaximilian\Gestion\app\build\intermediates\pre-dexed\debug\classes-edaaefd9aa173b08e2362007e68226b0d1c1645c.jar" />
     </item>
     <item
-        jar="C:\Users\Tonga\Documents\Proyectos\Repositorio\Gestion\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.3\classes.jar"
+        jar="C:\Users\Tonga\Documents\Proyectos\Repositorio\GestionMaximilian\Gestion\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.3\classes.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="81d42bf983a8741f4888a6e333e454e4a5e0eeb7">
-        <dex dex="C:\Users\Tonga\Documents\Proyectos\Repositorio\Gestion\app\build\intermediates\pre-dexed\debug\classes-7fb855c48933ef5e1408e59a693f2a5813233b4c.jar" />
+        <dex dex="C:\Users\Tonga\Documents\Proyectos\Repositorio\GestionMaximilian\Gestion\app\build\intermediates\pre-dexed\debug\classes-c6e77621f7291821f1b3641c60ac291d5a15514f.jar" />
+    </item>
+    <item
+        jar="C:\Users\Tonga\Documents\Proyectos\Repositorio\GestionMaximilian\Gestion\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\libs\internal_impl-21.0.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
+        <dex dex="C:\Users\Tonga\Documents\Proyectos\Repositorio\GestionMaximilian\Gestion\app\build\intermediates\pre-dexed\debug\internal_impl-21.0.3-730d80dfe147256f08b003e72034426e0fe5ace4.jar" />
     </item>
     <item
         jar="C:\Users\Tonga\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\21.0.3\support-annotations-21.0.3.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="4b74cefe1f0c1b819e7260c8627a14674e37fd35">
-        <dex dex="C:\Users\Tonga\Documents\Proyectos\Repositorio\Gestion\app\build\intermediates\pre-dexed\debug\support-annotations-21.0.3-88f9f2bc50fc35c6e9b2aabbc4b3a87f305468c1.jar" />
-    </item>
-    <item
-        jar="C:\Users\Tonga\Documents\Proyectos\Repositorio\Gestion\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\libs\internal_impl-21.0.3.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
-        <dex dex="C:\Users\Tonga\Documents\Proyectos\Repositorio\Gestion\app\build\intermediates\pre-dexed\debug\internal_impl-21.0.3-d8834e2666ffd5ef8aa2a7f4ab8262da41cf8219.jar" />
+        <dex dex="C:\Users\Tonga\Documents\Proyectos\Repositorio\GestionMaximilian\Gestion\app\build\intermediates\pre-dexed\debug\support-annotations-21.0.3-88f9f2bc50fc35c6e9b2aabbc4b3a87f305468c1.jar" />
     </item>
 
 </items>
