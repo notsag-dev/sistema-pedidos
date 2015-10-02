@@ -30,11 +30,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
-        <!--Spinner
-            android:id="@+id/sp_provincia"
+        <Spinner
+            android:id="@+id/listaCategoriasProductos"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:spinnerMode="dropdown" /-->
+            android:spinnerMode="dropdown" />
 
         <ListView xmlns:android="http://schemas.android.com/apk/res/android"
             android:id="@+id/listaProductos"

@@ -1,5 +1,6 @@
 package com.gastongimenez.www.gestion;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -8,27 +9,51 @@ import android.text.TextWatcher;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.EditText;
 import android.widget.ListView;
-
+import android.widget.Spinner;
+import android.widget.AdapterView.OnItemSelectedListener;
 
 public class MenuProductos extends ActionBarActivity {
     ListView listaProductos;
     EditText filtroProductos;
+    Spinner listaCategorias;
+    Context contexto;
     AdaptadorItemLineaProducto adaptadorProductos;
+    AdaptadorItemLineaString adaptadorCategorias;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        contexto = getApplicationContext();
         setContentView(R.layout.activity_menu_productos);
         listaProductos = (ListView) findViewById(R.id.listaProductos);
-        adaptadorProductos = new AdaptadorItemLineaProducto (getApplicationContext());
+        adaptadorProductos = new AdaptadorItemLineaProducto (contexto);
         listaProductos.setAdapter(adaptadorProductos);
+        adaptadorCategorias = new AdaptadorItemLineaString(contexto);
+        adaptadorCategorias.agregarLinea("Todas",-1);
+        adaptadorCategorias.completarValoresSQL("select * from categorias","nombre");
+        listaCategorias = (Spinner) findViewById(R.id.listaCategoriasProductos);
+        listaCategorias.setAdapter(adaptadorCategorias);
+        listaCategorias.setOnItemSelectedListener(new OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
+
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parentView) {
+                // your code here
+            }
+
+        });
+
         filtroProductos = (EditText) findViewById(R.id.filtroProducto);
         filtroProductos.addTextChangedListener(new TextWatcher() {
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                adaptadorProductos.completarProductos(filtroProductos.getText().toString());
+                adaptadorProductos.completarProductos(" nombre like '%" + filtroProductos.getText().toString() + "%'");
             }
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {

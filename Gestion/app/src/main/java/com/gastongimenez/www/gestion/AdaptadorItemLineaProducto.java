@@ -51,23 +51,14 @@ public class AdaptadorItemLineaProducto extends BaseAdapter {
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(context.LAYOUT_INFLATER_SERVICE);
         View rowView = inflater.inflate(R.layout.elemento_lista_productos, parent, false);
 
-        // Cantidad de unidades en el pack
-        //TextView textCantidadPack = (TextView) rowView.findViewById(R.id.cantidadPackProductos);
-        String cantidadPack = productos.get(posicion).cantidadPack;
-        //.setText(cantidadPack);
-
         // Nombre del producto
         TextView textNombreProducto = (TextView) rowView.findViewById(R.id.nombreProductoProductos);
         String nombre = productos.get(posicion).nombre;
-        if (cantidadPack.isEmpty()) {
-            textNombreProducto.setText(nombre);
-        } else {
-            textNombreProducto.setText(nombre + " x " + cantidadPack);
-        }
+        textNombreProducto.setText(nombre);
 
         // Precio pack
         TextView textPrecioPack = (TextView) rowView.findViewById(R.id.precioPackProductos);
-        textPrecioPack.setText(String.format("%.2f",productos.get(posicion).precioPack));
+        textPrecioPack.setText("$" + String.format("%.2f",productos.get(posicion).precioPack));
 
         // Precio unitario
         TextView textPrecioUnitario = (TextView) rowView.findViewById(R.id.precioUnitarioProductos);
@@ -78,6 +69,15 @@ public class AdaptadorItemLineaProducto extends BaseAdapter {
         TextView textPrecioPublico = (TextView) rowView.findViewById(R.id.precioPublicoProductos);
         textPrecioPublico.setText("Púb.: " + productos.get(posicion).precioPublico);
 
+        // Cantidad de unidades en el pack
+        TextView textCantidadPack = (TextView) rowView.findViewById(R.id.cantidadPack);
+        String cantidadPack = productos.get(posicion).cantidadPack;
+        if (!cantidadPack.isEmpty()) {
+            textCantidadPack.setText("Cant. en pack: " + cantidadPack);
+        } else {
+            textCantidadPack.setText("");
+        }
+
         return rowView;
     }
 
@@ -85,11 +85,11 @@ public class AdaptadorItemLineaProducto extends BaseAdapter {
         return productos;
     }
 
-    public void completarProductos(String filtroNombre){
+    public void completarProductos(String filtro){
         try {
             BaseDeDatos baseLocal = new BaseDeDatos(context);
             SQLiteDatabase bd = baseLocal.getReadableDatabase();
-            Cursor curProductos = bd.rawQuery("SELECT * FROM productos where nombre like '%" + filtroNombre + "%'", null);
+            Cursor curProductos = bd.rawQuery("SELECT * FROM productos where "+ filtro, null);
             Producto productoAux = null;
             productos = new ArrayList<Producto>();
             while (curProductos.moveToNext()) {
@@ -101,7 +101,8 @@ public class AdaptadorItemLineaProducto extends BaseAdapter {
                 productoAux.cantidadStock = curProductos.getInt(curProductos.getColumnIndexOrThrow("cantidad_stock"));
                 productoAux.precioPack = curProductos.getFloat(curProductos.getColumnIndexOrThrow("precio_pack"));
                 productoAux.precioPublico = curProductos.getString(curProductos.getColumnIndexOrThrow("precio_publico"));
-                //productoAux.categoria = curProductos.getString(curProductos.getColumnIndexOrThrow("categoria"));
+                productoAux.categoria = curProductos.getInt(curProductos.getColumnIndexOrThrow("categoria"));
+                productoAux.observaciones = curProductos.getString(curProductos.getColumnIndexOrThrow("observaciones"));
                 productos.add(productoAux);
             }
             notifyDataSetChanged();

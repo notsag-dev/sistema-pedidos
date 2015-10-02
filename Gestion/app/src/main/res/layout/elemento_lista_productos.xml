@@ -60,5 +60,14 @@
                 android:layout_marginRight="10dp"
                 android:gravity="center"
                 android:textColor="@color/green"/>
+        <TextView android:id="@+id/cantidadPack"
+            android:layout_width="wrap_content"
+            android:text="texto test"
+            android:textSize="17dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+            android:textColor="@color/green"/>
     </LinearLayout>
 </LinearLayout>

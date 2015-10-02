@@ -3,3 +3,8 @@ Filtro por categoría (combo box)
 Cambio a mano del precio de línea en el pedido
 Posibilidad de vender unidades sueltas cuando el producto está ingresado por el pack
 Pensar forma de pasar archivo de tablet a tablet (drive, dropbox).
+
+
+Nota integración de datos:
+**************************
+    - Campos de precio unitario y precio del pack deben ser numéricos para considerar casos en que se pueden vender unidades de un pack. Hay casos en la planilla en los que esto no se cumple. Agregamos un campo observaciones a la tabla de productos para hacer las aclaraciones pertinentes. Ej. "precio unitario/kg".

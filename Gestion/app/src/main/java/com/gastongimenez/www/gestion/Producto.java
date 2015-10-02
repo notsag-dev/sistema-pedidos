@@ -11,5 +11,6 @@ public class Producto {
     public Float precioPack;
     public Float precioUnitario;
     public String precioPublico;
-    public String categoria;
+    public int categoria;
+    public String observaciones;
 }
