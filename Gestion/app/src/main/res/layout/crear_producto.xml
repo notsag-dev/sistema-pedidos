@@ -5,45 +5,110 @@
     android:layout_marginLeft="15dp"
     android:layout_marginTop="15dp"
     android:label="Nuevo producto">
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Nombre: "/>
-    <EditText
-        android:layout_width="wrap_content"
-        android:maxWidth="400dp"
-        android:minWidth="400dp"
-        android:layout_height="wrap_content"
-        android:layout_marginRight="20dp"
-        android:id="@+id/nombreProductoIngreso"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Precio: "/>
-    <EditText
-        android:layout_width="wrap_content"
-        android:maxWidth="150dp"
-        android:minWidth="150dp"
-        android:inputType="numberDecimal"
-        android:layout_height="wrap_content"
-        android:layout_marginRight="20dp"
-        android:id="@+id/precioProductoIngreso"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Cantidad:"/>
-    <EditText
-        android:layout_width="wrap_content"
-        android:maxWidth="150dp"
-        android:minWidth="150dp"
-        android:layout_height="wrap_content"
-        android:layout_marginRight="20dp"
-        android:inputType="number"
-        android:id="@+id/cantidadProductosIngreso"/>
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="guardarProducto"
-        android:text="Guardar"/>
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:fillViewport="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nombre: "/>
+            <EditText
+                android:layout_width="wrap_content"
+                android:maxWidth="400dp"
+                android:minWidth="400dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:id="@+id/nombreProductoIngreso"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cantidad pack: "/>
+            <EditText
+                android:layout_width="wrap_content"
+                android:inputType="number"
+                android:maxWidth="150dp"
+                android:minWidth="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:id="@+id/cantidadPackProductoIngreso"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cantidad en stock:"/>
+            <EditText
+                android:layout_width="wrap_content"
+                android:maxWidth="150dp"
+                android:minWidth="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:inputType="number"
+                android:id="@+id/cantidadStockProductosIngreso"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Precio del pack: "/>
+            <EditText
+                android:layout_width="wrap_content"
+                android:maxWidth="150dp"
+                android:minWidth="150dp"
+                android:inputType="numberDecimal"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:id="@+id/precioPackProductoIngreso"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Precio unitario: "/>
+            <EditText
+                android:layout_width="wrap_content"
+                android:maxWidth="150dp"
+                android:minWidth="150dp"
+                android:inputType="numberDecimal"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:id="@+id/precioUnitarioProductoIngreso"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Precio al público: "/>
+            <EditText
+                android:layout_width="wrap_content"
+                android:maxWidth="150dp"
+                android:minWidth="150dp"
+                android:inputType="numberDecimal"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:id="@+id/precioPublicoProductoIngreso"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Observaciones: "/>
+            <EditText
+                android:layout_width="wrap_content"
+                android:maxWidth="400dp"
+                android:minWidth="400dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:id="@+id/observacionesProductoIngreso"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Categoría: "/>
+            <Spinner
+                android:id="@+id/categoriaProductoIngreso"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:spinnerMode="dropdown" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="guardarProducto"
+                android:text="Guardar"/>
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>

@@ -35,11 +35,10 @@ public class MenuProductos extends ActionBarActivity {
         listaProductos = (ListView) findViewById(R.id.listaProductos);
         adaptadorProductos = new AdaptadorItemLineaProducto (contexto);
         listaProductos.setAdapter(adaptadorProductos);
+
         adaptadorCategorias = new AdaptadorItemLineaString(contexto);
         adaptadorCategorias.agregarLinea("Todas",-1);
         adaptadorCategorias.completarValoresSQL("select * from categorias","nombre");
-
-
         idCategoriaFiltro = auxFiltroCatTodos.longValue();
         listaCategorias = (Spinner) findViewById(R.id.listaCategoriasProductos);
         listaCategorias.setAdapter(adaptadorCategorias);
