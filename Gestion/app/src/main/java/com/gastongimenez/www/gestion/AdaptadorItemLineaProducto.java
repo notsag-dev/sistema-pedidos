@@ -89,7 +89,7 @@ public class AdaptadorItemLineaProducto extends BaseAdapter {
         try {
             BaseDeDatos baseLocal = new BaseDeDatos(context);
             SQLiteDatabase bd = baseLocal.getReadableDatabase();
-            Cursor curProductos = bd.rawQuery("SELECT * FROM productos where "+ filtro, null);
+            Cursor curProductos = bd.rawQuery("SELECT * FROM productos "+ filtro, null);
             Producto productoAux = null;
             productos = new ArrayList<Producto>();
             while (curProductos.moveToNext()) {
@@ -101,7 +101,7 @@ public class AdaptadorItemLineaProducto extends BaseAdapter {
                 productoAux.cantidadStock = curProductos.getInt(curProductos.getColumnIndexOrThrow("cantidad_stock"));
                 productoAux.precioPack = curProductos.getFloat(curProductos.getColumnIndexOrThrow("precio_pack"));
                 productoAux.precioPublico = curProductos.getString(curProductos.getColumnIndexOrThrow("precio_publico"));
-                productoAux.categoria = curProductos.getInt(curProductos.getColumnIndexOrThrow("categoria"));
+                productoAux.categoria = curProductos.getInt(curProductos.getColumnIndexOrThrow("id_categoria"));
                 productoAux.observaciones = curProductos.getString(curProductos.getColumnIndexOrThrow("observaciones"));
                 productos.add(productoAux);
             }

@@ -22,6 +22,10 @@ public class MenuProductos extends ActionBarActivity {
     Context contexto;
     AdaptadorItemLineaProducto adaptadorProductos;
     AdaptadorItemLineaString adaptadorCategorias;
+    Long idCategoriaFiltro;
+    String filtroSQLNombre;
+    String filtroSQLCategoria;
+    Integer auxFiltroCatTodos = -1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,26 +38,34 @@ public class MenuProductos extends ActionBarActivity {
         adaptadorCategorias = new AdaptadorItemLineaString(contexto);
         adaptadorCategorias.agregarLinea("Todas",-1);
         adaptadorCategorias.completarValoresSQL("select * from categorias","nombre");
+
+
+        idCategoriaFiltro = auxFiltroCatTodos.longValue();
         listaCategorias = (Spinner) findViewById(R.id.listaCategoriasProductos);
         listaCategorias.setAdapter(adaptadorCategorias);
         listaCategorias.setOnItemSelectedListener(new OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
-
+                if (id != auxFiltroCatTodos.longValue()){
+                    filtroSQLCategoria = " and id_categoria = " + id;
+                } else {
+                    filtroSQLCategoria = "";
+                }
+                adaptadorProductos.completarProductos(filtroSQLNombre + filtroSQLCategoria);
             }
 
             @Override
             public void onNothingSelected(AdapterView<?> parentView) {
                 // your code here
             }
-
         });
 
         filtroProductos = (EditText) findViewById(R.id.filtroProducto);
         filtroProductos.addTextChangedListener(new TextWatcher() {
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                adaptadorProductos.completarProductos(" nombre like '%" + filtroProductos.getText().toString() + "%'");
+                filtroSQLNombre = "where nombre like '%" + filtroProductos.getText().toString() + "%'";
+                adaptadorProductos.completarProductos(filtroSQLNombre + filtroSQLCategoria);
             }
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -64,6 +76,8 @@ public class MenuProductos extends ActionBarActivity {
             }
         });
 
+        filtroSQLCategoria = "";
+        filtroSQLNombre = "where nombre like '%'";
     }
 
 
