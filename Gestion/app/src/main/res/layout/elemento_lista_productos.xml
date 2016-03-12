@@ -1,37 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#131912">
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textStyle="bold"
         android:layout_marginTop="5dp">
         <TextView android:id="@+id/nombreProductoProductos"
+            style="@style/Blancoynegro"
             android:layout_width="wrap_content"
             android:text="texto test"
-            android:textSize="20dp"
+            android:textSize="28dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
-            android:textColor="@color/black"
             android:layout_alignParentLeft="true"
             android:layout_toLeftOf="@+id/precioPackProductos"/>
 
         <TextView android:id="@+id/precioPackProductos"
+            style="@style/Blancoynegro"
             android:layout_width="wrap_content"
             android:text="texto test"
-            android:textSize="20dp"
+            android:textSize="28dp"
             android:layout_height="wrap_content"
             android:layout_marginRight="10dp"
             android:layout_alignParentRight="true"
             android:paddingLeft="15dp"
-            android:gravity="center"
-            android:textColor="@color/brown"/>
+            android:gravity="center" />
     </RelativeLayout>Layout>
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="5dp">
+        android:layout_marginBottom="7dp">
         <!--TextView android:id="@+id/cantidadPackProductos"
             android:layout_width="wrap_content"
             android:text="texto test"
@@ -41,33 +42,33 @@
             android:gravity="center"
             android:textColor="@color/black"/-->
             <TextView android:id="@+id/precioUnitarioProductos"
+                android:textColor="#D4D4D4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="texto test"
-                android:textSize="17dp"
+                android:textSize="19dp"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="10dp"
                 android:gravity="center"
                 android:layout_alignParentLeft="true"
-                android:textColor="@color/green"
                 android:layout_toLeftOf="@+id/precioPublicoProductos"/>
             <TextView android:id="@+id/precioPublicoProductos"
+                android:textColor="#D4D4D4"
                 android:layout_width="wrap_content"
                 android:text="texto test"
-                android:textSize="17dp"
+                android:textSize="19dp"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:layout_marginRight="10dp"
-                android:gravity="center"
-                android:textColor="@color/green"/>
+                android:gravity="center"/>
         <TextView android:id="@+id/cantidadPack"
+            android:textColor="#D4D4D4"
             android:layout_width="wrap_content"
             android:text="texto test"
-            android:textSize="17dp"
+            android:textSize="19dp"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_marginRight="10dp"
-            android:gravity="center"
-            android:textColor="@color/green"/>
+            android:gravity="center"/>
     </LinearLayout>
 </LinearLayout>
