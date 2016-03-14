@@ -3,6 +3,8 @@ package com.gastongimenez.www.gestion;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.graphics.Color;
+import android.graphics.Typeface;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -55,27 +57,39 @@ public class AdaptadorItemLineaProducto extends BaseAdapter {
         TextView textNombreProducto = (TextView) rowView.findViewById(R.id.nombreProductoProductos);
         String nombre = productos.get(posicion).nombre;
         textNombreProducto.setText(nombre);
+        //textNombreProducto.setTypeface(null, Typeface.BOLD);
 
         // Precio pack
         TextView textPrecioPack = (TextView) rowView.findViewById(R.id.precioPackProductos);
         textPrecioPack.setText("$" + String.format("%.2f",productos.get(posicion).precioPack));
+        //textPrecioPack.setTypeface(null, Typeface.BOLD);
 
         // Precio unitario
         TextView textPrecioUnitario = (TextView) rowView.findViewById(R.id.precioUnitarioProductos);
         Float precioUnitario = productos.get(posicion).precioUnitario;
         textPrecioUnitario.setText("Unit.: " + precioUnitario.toString());
+        textPrecioUnitario.setTypeface(null, Typeface.BOLD);
 
         // Precio al publico
         TextView textPrecioPublico = (TextView) rowView.findViewById(R.id.precioPublicoProductos);
         textPrecioPublico.setText("Púb.: " + productos.get(posicion).precioPublico);
+        textPrecioPublico.setTypeface(null, Typeface.BOLD);
 
         // Cantidad de unidades en el pack
         TextView textCantidadPack = (TextView) rowView.findViewById(R.id.cantidadPack);
         String cantidadPack = productos.get(posicion).cantidadPack;
+        textCantidadPack.setTypeface(null, Typeface.BOLD);
+
         if (!cantidadPack.isEmpty()) {
             textCantidadPack.setText("Cant. en pack: " + cantidadPack);
         } else {
             textCantidadPack.setText("");
+        }
+
+        if ((posicion % 2) == 0) {
+            rowView.setBackgroundResource(R.color.grisclaro);
+        } else {
+            rowView.setBackgroundResource(R.color.verdeclaro);
         }
 
         return rowView;

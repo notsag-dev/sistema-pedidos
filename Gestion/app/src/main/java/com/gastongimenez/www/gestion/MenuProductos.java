@@ -21,7 +21,7 @@ public class MenuProductos extends ActionBarActivity {
     Spinner listaCategorias;
     Context contexto;
     AdaptadorItemLineaProducto adaptadorProductos;
-    AdaptadorItemLineaString adaptadorCategorias;
+    AdaptadorSpinner adaptadorCategorias;
     Long idCategoriaFiltro;
     String filtroSQLNombre;
     String filtroSQLCategoria;
@@ -36,7 +36,7 @@ public class MenuProductos extends ActionBarActivity {
         adaptadorProductos = new AdaptadorItemLineaProducto (contexto);
         listaProductos.setAdapter(adaptadorProductos);
 
-        adaptadorCategorias = new AdaptadorItemLineaString(contexto);
+        adaptadorCategorias = new AdaptadorSpinner(contexto);
         adaptadorCategorias.agregarLinea("Todas",-1);
         adaptadorCategorias.completarValoresSQL("select * from categorias","nombre");
         idCategoriaFiltro = auxFiltroCatTodos.longValue();

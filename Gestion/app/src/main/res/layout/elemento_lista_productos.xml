@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#131912">
+    android:layout_height="match_parent">
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textStyle="bold"
         android:layout_marginTop="5dp">
         <TextView android:id="@+id/nombreProductoProductos"
-            style="@style/Blancoynegro"
+            android:textColor="#131912"
             android:layout_width="wrap_content"
             android:text="texto test"
             android:textSize="28dp"
@@ -17,9 +16,8 @@
             android:layout_marginLeft="5dp"
             android:layout_alignParentLeft="true"
             android:layout_toLeftOf="@+id/precioPackProductos"/>
-
         <TextView android:id="@+id/precioPackProductos"
-            style="@style/Blancoynegro"
+            android:textColor="#131912"
             android:layout_width="wrap_content"
             android:text="texto test"
             android:textSize="28dp"
@@ -42,7 +40,7 @@
             android:gravity="center"
             android:textColor="@color/black"/-->
             <TextView android:id="@+id/precioUnitarioProductos"
-                android:textColor="#D4D4D4"
+                android:textColor="#131912"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="texto test"
@@ -53,7 +51,7 @@
                 android:layout_alignParentLeft="true"
                 android:layout_toLeftOf="@+id/precioPublicoProductos"/>
             <TextView android:id="@+id/precioPublicoProductos"
-                android:textColor="#D4D4D4"
+                android:textColor="#131912"
                 android:layout_width="wrap_content"
                 android:text="texto test"
                 android:textSize="19dp"
@@ -62,7 +60,7 @@
                 android:layout_marginRight="10dp"
                 android:gravity="center"/>
         <TextView android:id="@+id/cantidadPack"
-            android:textColor="#D4D4D4"
+            android:textColor="#131912"
             android:layout_width="wrap_content"
             android:text="texto test"
             android:textSize="19dp"

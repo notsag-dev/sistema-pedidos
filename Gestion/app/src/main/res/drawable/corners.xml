@@ -4,16 +4,12 @@
         android:radius="50dp"
         />
     <solid
-        android:color="#212B1F"
+        android:color="@color/grisclaro"
         />
     <padding
         android:left="15dp"
         android:top="0dp"
         android:right="0dp"
         android:bottom="0dp"
-        />
-    <size
-        android:width="270dp"
-        android:height="60dp"
         />
 </shape>

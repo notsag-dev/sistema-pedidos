@@ -13,4 +13,14 @@
         <item name="android:shadowDy">0</item>
         <item name="android:shadowRadius">5</item>
     </style>
+
+    <style name="spinnerItemStyle" parent="android:Widget.TextView.SpinnerItem">
+        <item name="android:textColor">@color/verdeoscuro</item>
+        <item name="android:shadowColor">#5D5E5E</item>
+        <item name="android:textSize">25dp</item>
+    </style>
+
+
+    <style name="spinnerDropDownItemStyle" parent="android:TextAppearance.Widget.TextView.SpinnerItem">
+    </style>
 </resources>
